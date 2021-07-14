@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: carrosGrpc
+datasources:
+  default:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:carros_grpc_db}?createDatabaseIfNotExist=true&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASS:root}
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+jpa.default.properties.hibernate.hbm2ddl.auto: update
